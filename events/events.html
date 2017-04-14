@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset=utf-8 />
+<!-- *** HTML Template Meta *** -->
+<title>Events | BBC Digital Signage Template</title>
+<meta name="description" content="The Events Template was created to display a series of custom events that rotate into the screen view one at a time." />
+
+<!-- Schema.org markup for Google+ -->
+
+<!-- Twitter Card data -->
+
+<!-- Open Graph data -->
+
+<!--Fav Icon-->
+<link rel="shortcut icon" href="images/bbc_logo_favicon.png" />
+    
+<!--Style Sheet-->
+<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href="events.css">
+    
+<!--Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Oswald:700,300' rel='stylesheet' type='text/css'>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!--Web Components-->    
+<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="bower_components/google-sheets/google-sheets.html">
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+</head>
+	
+<body id="gradient" unresolved>
+    <!--Background Animation-->
+    <div id="background">
+        <img src="images/BBCChurch-1920-washed.jpg">
+    </div>
+    <!-- Published Spreadsheet Details -->
+<google-sheets id="sheet" 
+               key="1yen6q1hGjPHzpZnql1Sy2UyY_U7nG50RVZq_KYPvxSQ"
+               gid="0"
+               rows="{{rows}}"
+               published>
+</google-sheets>
+    
+<!--Header-->      
+<div id="header">BBC UPCOMING EVENTS</div>
+ 
+<!--Text Transition-->  
+<div  id="content">
+
+<!--Information collected from google sheet-->
+    <main layout horizontal>
+
+
+         <section>
+
+             <template id="rows" bind>
+
+<!-- Information from Spreadsheet Rows -->
+                <template repeat="{{rows}}">
+                    <div class="slides">
+                        <h2 class="date">{{gsx$date.$t}}</h2>
+                        <h2 class="event">{{gsx$event.$t}}</h2>
+                        <p class="desc">{{gsx$description.$t}}</p>
+                    </div>
+                 </template>
+            </template>
+
+        </section>
+
+    </main>
+</div>
+    
+<!--Logo-->      
+<div  id="logo">
+  
+</div>
+
+<!--Footer Icons-->   
+<!--Github Icon-->
+<div id="github">
+</div>
+    
+<!--BBC logo-->
+<div id="footer">
+    <div id="bbcicon">
+        <img width="80" height="80" src="images/bbc_logo_notext_white-80x80.png"/>
+    </div>
+    <div id="bbcname">
+        <h2>Bellevue Baptist Church</h2>
+    </div>
+</div>
+</body> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</html>

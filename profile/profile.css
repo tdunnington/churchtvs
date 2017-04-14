@@ -1,0 +1,355 @@
+html, body {
+	width:100%;
+	height:100%;
+	margin: 0px;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+body{
+    background-color:#303038;
+    font-family: 'Lato', sans-serif;
+    color:#fff;
+    text-align: left;
+}
+
+/* Initial Fade in CSS Animation */
+@-webkit-keyframes slideIn { 
+    from { 
+        opacity:0;
+        margin-left: -60%;
+    } 
+    to { 
+        opacity:1; 
+        margin-left: 0px;
+    } 
+}
+    .slide-in {
+	opacity:0 !important;
+	-webkit-animation:slideIn ease-out 1;  
+	-webkit-animation-fill-mode:forwards;
+	-webkit-animation-duration:.5s;
+}
+    .slide-in.one {
+    -webkit-animation-delay: .5s;
+}
+
+    .slide-in.two {
+    -webkit-animation-delay: 1s;
+}
+
+/* Background Elements */
+.radial-gradient {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left:25%;
+    top:30%;
+    background:-webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 60%);
+    z-index:0;
+}
+
+.swirl {
+	overflow: hidden;
+	position: absolute;
+	text-align: center;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.swirl img{
+	position: absolute;
+    width:100%;
+    left:18%;
+    top:-35%;
+    height:125%;
+    -webkit-transform: rotate(45deg);
+    -webkit-opacity: .1;
+}
+
+/* Teacher Profile Header */
+.header-container {
+    position:relative;
+    border-radius: 20px;
+    background-color: #fd6120;
+    left: 5%;
+    top:-5%;
+    width: 45%;
+    height: 18%;
+    z-index: 5;
+}
+
+.header {
+    position: absolute;
+    font-weight: 800;
+	width: 100%;
+	line-height: 110%;
+	font-size: 58px;
+	text-align: center;
+    color:#fff; 
+    text-transform: uppercase;
+}
+
+/* Teacher Profile Text */
+.text-container {
+    position:absolute;	
+    width:90%;
+    height:65%;
+    top:25%;
+    left:5%;
+    z-index:2;
+}
+
+.teacher-text {
+    position:absolute;	
+    width:70%;
+    height:100%;
+    top:0%;
+    left:0%;
+    z-index:3;
+}
+
+.title {
+    height:35%;
+    font-size:60px;
+    font-weight:600;
+    line-height: 100%;
+    margin-bottom: 0%;
+    margin-top: -2%;
+    color: #fff;
+}
+
+.description {
+    height:60%;
+    line-height: 110%;
+    margin-top: .5%;
+    color: #fff;
+    font-size:48px;
+}
+
+.name {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 90px;
+    color:#d1ecfb;
+}
+
+/* Teacher Profile Icon */
+.icon {
+    height: 300px;
+    width: 300px;
+    z-index: 1;
+}
+
+.icon-shadow {
+	position: absolute;
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 68%,rgba(0,0,0,0) 100%);
+    height: 10%;
+    width: 45%;
+	top: 90%;
+	left:-15%;
+}
+
+.icon-container {
+    height: 50%;
+	width:50%;
+    left: 80%;
+    position: absolute;
+}
+
+.icon {
+    -webkit-animation-direction: alternate;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: bounce;
+    -webkit-animation-iteration-count: infinite;
+    margin-left: -100px;
+    position: absolute;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    bottom: 20px;
+  }
+
+  to {
+    bottom: 60px;
+  }
+}
+
+/* Media Query for 1024x768 pixel and under*/	
+@media only screen and (max-width: 1024px) {
+    .swirl img{
+        left:30%;
+    }
+    
+    .header-container {
+        border-radius: 20px;
+    }
+
+    .header {
+        margin-top:13%;
+        font-size: 48px;
+    }
+    
+    .title {
+        font-size:46px;
+    }
+
+    .description {
+        font-size:42px;
+        margin-top: -2.5%;
+    }
+
+    .name {
+        font-size: 64px;
+    }
+    
+}
+
+/* Media Query for 1280x768 */	
+@media only screen and (min-width: 1280px) {	    
+    .swirl img{
+        left:23%;
+        height:120%;
+    }
+}
+
+/* Media Query for 1920x1080 */	
+@media only screen and (min-width: 1920px) {
+    .swirl img{
+        left:17%;
+        height:125%;
+    }
+    .header-container {
+        border-radius: 40px;
+    }
+
+    .header {
+        font-size: 78px;
+    }
+    
+    .title {
+        font-size:90px;
+    }
+
+    .description {
+        font-size:68px;
+        margin-top: -2.5%;
+    }
+
+    .name {
+        font-size: 130px;
+    }
+    
+    /* Teacher Profile Icon */
+    .icon {
+      height: 450px;
+      width: 450px;
+    }
+	
+	.icon-shadow {
+		left:-10%;
+	}
+	
+
+}
+
+/* media querry for 3840x2160*/
+	@media only screen and (min-width: 3840px) {
+    .header-container {
+        border-radius: 80px;
+    }
+
+    .header {
+        font-size: 156px;
+    }
+    
+    .title {
+        font-size:180px;
+    }
+
+    .description {
+        font-size:136px;
+    }
+
+    .name {
+        font-size: 260px;
+    }
+    
+    /* Teacher Profile Icon */
+    .icon {
+		height: 900px;
+		width: 900px;
+		left:-10%;
+    }
+		
+	.icon-shadow {
+		left:-15%;
+	}
+}
+
+/* footer icons */
+#engage {
+	 width:20%;
+	 height:4%;
+	 left:10%;
+	 top:90%;
+	 z-index:4;
+	 margin-left:-1%;
+	 position:absolute;
+	 z-index:4;
+}
+	
+#engagebtn {
+	color:white;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;	
+	text-decoration: none;
+	font-size:25px;
+	opacity:1;
+	z-index:4;
+}
+
+	@media only screen and (min-width: 1280px) {
+	    #engagebtn {
+			font-size:25px;
+	    }
+	}
+	
+	/* 1360x768 */
+	@media only screen and (min-width: 1360px) {
+	    #engagebtn {
+			font-size:24px;
+	    }
+	}
+	
+	/* 1920x1080*/
+	@media only screen and (min-width: 1920px) {	    
+        #engagebtn {
+			font-size: 34px;
+	    }
+	}
+	
+	/* 3840x2160 */
+	@media screen and (min-width: 2200px) {
+	    #engagebtn {
+			font-size: 64px;
+	    }
+	}
+
+#bbc {
+	opacity:1;
+	width:10%;
+	height:10%;
+	left:5%;
+	top:85%;
+	z-index:5;
+	margin-left:-1%;
+	position:absolute;
+	z-index:5;
+}
+
+#bbcbtn {
+    width:auto; 
+    height:100%;   
+}
