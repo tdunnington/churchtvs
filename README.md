@@ -1,2 +1,2 @@
 # churchtvs
-Our church tv repo
+This is the source for our church tvs.
