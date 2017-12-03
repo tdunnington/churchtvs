@@ -46,7 +46,7 @@ var loaded = true;
 //      1. Duration in seconds.
 //      2. Title to be used in menu.
 //      3. Source URL. Can be full URI or a relative URL.
-slides[1] = new Array(2, "Title", "images/BBC-Title-1920x1080.jpg");
+slides[1] = new Array(5, "Title", "images/BBC-Title-1920x1080.jpg");
 slides[2] = new Array(30, "Events", "events/events.html");
 slides[3] = new Array(15, "Profile", "profile/profile-bhall.html");
 slides[4] = new Array(50, "Slideshow", "googleslides.html");
@@ -184,7 +184,7 @@ window.onload = LoadTrigger;
 </script>
 </head>
 <body class="siteshow">
-<iframe id="content" name="content" style="width:100%; height:100%;" frameborder="no" scrolling="auto" src="" onmouseover="MenuShow();" onload="FadeInContent();" ></iframe>
+<iframe id="content" name="content" style="width:100%; height:100%;" frameborder="no" scrolling="no" src="" onmouseover="MenuShow();" onload="FadeInContent();" ></iframe>
 <div id="menu">
     <div id="title">SiteShow Menu</div>
     <div id="slides">
