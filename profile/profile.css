@@ -53,7 +53,7 @@ body{
 .swirl {
 	overflow: hidden;
 	position: absolute;
-	text-align: center;
+	text-align: l;
     width:100%;
     height:100%;
     z-index:-1;
@@ -62,11 +62,9 @@ body{
 .swirl img{
 	position: absolute;
     width:100%;
-    left:18%;
-    top:-35%;
-    height:125%;
-    -webkit-transform: rotate(45deg);
-    -webkit-opacity: .1;
+    height:100%;
+    -webkit-transform: rotate(0deg);
+    -webkit-opacity: .4;
 }
 
 /* Teacher Profile Header */
@@ -180,7 +178,7 @@ body{
 /* Media Query for 1024x768 pixel and under*/	
 @media only screen and (max-width: 1024px) {
     .swirl img{
-        left:30%;
+        left:0%;
     }
     
     .header-container {
@@ -210,16 +208,16 @@ body{
 /* Media Query for 1280x768 */	
 @media only screen and (min-width: 1280px) {	    
     .swirl img{
-        left:23%;
-        height:120%;
+        left:0%;
+        height:100%;
     }
 }
 
 /* Media Query for 1920x1080 */	
 @media only screen and (min-width: 1920px) {
     .swirl img{
-        left:17%;
-        height:125%;
+        left:0%;
+        height:100%;
     }
     .header-container {
         border-radius: 40px;
