@@ -338,11 +338,11 @@ body{
 #bbc {
 	opacity:1;
 	width:10%;
-	height:10%;
+	height:20%;
 	left:5%;
-	top:85%;
+	top:80%;
 	z-index:5;
-	margin-left:-1%;
+	margin-left:68%;
 	position:absolute;
 	z-index:5;
 }
